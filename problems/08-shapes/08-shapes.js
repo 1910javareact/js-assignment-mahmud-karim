@@ -53,7 +53,7 @@ function printShape(shape, height, character) {
       //sechalf varialbe for printing out the second hald
       let secHalf = Math.floor(height/2)
       //spaces varible for keeping track of the spaces
-      let spaces = half - 1
+      let spaces = Math.floor(height/2)
       //prints the first half of the diamond
       for(let i = 0; i < half; i++){
         let temp = ""
@@ -71,10 +71,11 @@ function printShape(shape, height, character) {
         console.log(temp);
       }
       //resests the spaces and star
+      
       spaces = 0
-      star = half
+      star -=3
       //prints out the second half of the diamond
-      for(let i = secHalf; i > 0; i--){
+      for(let i = half; i > 0; i--){
         let temp = " "
         //prints the spaces
         for(let j = 0;j < spaces; j++){
